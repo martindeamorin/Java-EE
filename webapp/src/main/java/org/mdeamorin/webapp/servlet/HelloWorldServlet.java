@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/hola-mundo")
+@WebServlet("/hello-world")
 public class HelloWorldServlet extends HttpServlet {
 
     @Override

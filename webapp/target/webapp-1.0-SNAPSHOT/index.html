@@ -6,6 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>U did it asdasson!!!!!</h1>
+    <h1>Default Page Tomcat</h1>
+    <div>
+        <h2>Listado de URLS</h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="/webapp/hello-world">
+                        Hola Mundo Servlet
+                    </a>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <a href="/webapp/param/get-url?greeting=Que tal&name=Pedro&code=12345">
+                                Url con Query Param: Saludo y Nombre y Codigo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/webapp/param/get-url?greeting=Que tal&name=Pedro">
+                                Url con Query Param: Saludo y Nombre
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/webapp/param/get-url?greeting=Que tal">
+                                Url con Query Param: Saludo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/webapp/param/get-url?name=Pedro">
+                                Url con Query Param: Nombre
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/webapp/param/get-url">
+                                Url con Query Param: Sin Saludo ni Nombre
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
