@@ -1,0 +1,31 @@
+API SERVLET
+
+HttpServlet -> Clase que se encarga de gestionar la construccion y presentacion de paginas web siguiendo el protocolo REST (recibe un request, lo procesa y devuelve un response). Se mapean a una ruta url y tienen un ciclo de vida. A su vez estan peuden devolverr HTML, binarios o redireccionar hacia otros servlets.
+
+Implementa los siguientes metodos HTTP:
+
+-GET (doGet)
+-POST (doPost)
+-DELETE (doDelete)
+-HEAD (doHead)
+-OPTIONS (doOptions)
+-PUT (doPut)
+-TRACE (doTrace)
+
+Servlet llama a estos metodos a traves del metodo service.
+
+Estructura
+
+                                                                                                -> ServletRequest (I) -> HttpServletRequest (C) 
+Servlet (I) -> GenericServlet (A) -> HttpServlet (C) -> Clase que se implementa de forma custom, clase principal. 
+                                                                                                -> ServletResponse (I) -> HttpServletResponse (C)
+
+Ciclo de vida
+
+1. Se compila y registra en el server de tomcat
+2. init() -> Se invoca una sola vez, se usa para configuracion, establecer conexiones, etc.
+3. Cada vez que se ejecuta un request no se genera un nuevo Servlet, si no que se dispara un nuevo hilo.
+    3.1. Se invoca el metodo service() con los objetos de Request y Response correspondientes.
+    3.2. Se deriva al metodo correspondiente al verbo HTTP de la Request: doGet, doPost, etc
+    3.3. Se ejecuta la logica que nosotros implementamos al sobre escribir los metodos do...
+4. destroy() -> Se cierran todas las conexiones que se hayan establecido en el init, es un cleanup.
