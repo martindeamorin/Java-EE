@@ -1,0 +1,5 @@
+org\mdeamorin\webapp\headers\controllers\RequestHeadersServlet.class
+org\mdeamorin\webapp\headers\services\ProductService.class
+org\mdeamorin\webapp\headers\models\Product.class
+org\mdeamorin\webapp\headers\services\ProductServiceImpl.class
+org\mdeamorin\webapp\headers\controllers\ProductXlsxServlet.class
